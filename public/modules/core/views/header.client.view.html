@@ -56,7 +56,7 @@
 		</ul>
 	</nav>-->
 
-	<div class="ui secondary pointing menu">
+	<div class="ui large secondary pointing menu">
 		<a class="active item">
 			<i class="home icon"></i> Home
 		</a>
@@ -69,10 +69,28 @@
 			<i class="user icon"></i> Friends
 		</a>
 
-		<div class="right menu">
-			<a class="ui item">
-				Logout
-			</a>
+		<div class="right menu" data-ng-hide="authentication.user">
+
+			<dropdown title="Login" ng-model="dropdown_model" open="true">
+			    <dropdown-group>
+			    	<a 
+						class="item" 
+						href="/#!/signup"
+						ui-route="/signup" 
+						ng-class="{active: $uiRoute}">
+						Sign Up
+					</a>
+				</dropdown-group>
+			    <dropdown-group>
+			    	<a 
+						class="item" 
+						href="/#!/signin"
+						ui-route="/signin" 
+						ng-class="{active: $uiRoute}">
+						Sign In
+					</a>
+				</dropdown-group>
+			</dropdown>
 		</div>
 	</div>
 </div>

@@ -4,7 +4,16 @@
 var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'mean-semantic-ui';
-	var applicationModuleVendorDependencies = ['ngResource', 'ngCookies',  'ngAnimate',  'ngTouch',  'ngSanitize',  'ui.router', 'ui.utils'];
+	var applicationModuleVendorDependencies = [
+		'ngResource', 
+		'ngCookies',  
+		'ngAnimate',  
+		'ngTouch',  
+		'ngSanitize',  
+		'ui.router', 
+		'ui.utils',
+		'angularify.semantic'
+	];
 
 	// Add a new vertical module
 	var registerModule = function(moduleName, dependencies) {
